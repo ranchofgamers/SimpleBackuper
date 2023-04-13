@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitRepositories\\SimpleBackuper\\SimpleBackuper\\SimpleBackuper.csproj": {}
+    "E:\\Рабочий стол\\Проекты программирование\\SimpleBackuper\\SimpleBackuper.csproj": {}
   },
   "projects": {
-    "D:\\GitRepositories\\SimpleBackuper\\SimpleBackuper\\SimpleBackuper.csproj": {
+    "E:\\Рабочий стол\\Проекты программирование\\SimpleBackuper\\SimpleBackuper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitRepositories\\SimpleBackuper\\SimpleBackuper\\SimpleBackuper.csproj",
+        "projectUniqueName": "E:\\Рабочий стол\\Проекты программирование\\SimpleBackuper\\SimpleBackuper.csproj",
         "projectName": "SimpleBackuper",
-        "projectPath": "D:\\GitRepositories\\SimpleBackuper\\SimpleBackuper\\SimpleBackuper.csproj",
-        "packagesPath": "C:\\Users\\oshoshkin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitRepositories\\SimpleBackuper\\SimpleBackuper\\obj\\",
+        "projectPath": "E:\\Рабочий стол\\Проекты программирование\\SimpleBackuper\\SimpleBackuper.csproj",
+        "packagesPath": "C:\\Users\\Nonic\\.nuget\\packages\\",
+        "outputPath": "E:\\Рабочий стол\\Проекты программирование\\SimpleBackuper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\oshoshkin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nonic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "System.Management": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

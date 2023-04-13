@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qT4a62xg7avF1XFZjnQ5ZyLTISCio3WkKSgFimBEpwOtdjXvgGH6LE3WjgQjv/rtvHL905f9WPrme6GSskrQHA==",
+  "dgSpecHash": "OMd2INvFPfjYI8bliaC7DwZcM1b0TTF2QFviUO1URqDa7qjsJm5nWpvmi1dR6tdRoFuKVqEAo4HoYgaKfzjUVw==",
   "success": true,
-  "projectFilePath": "D:\\GitRepositories\\SimpleBackuper\\SimpleBackuper\\SimpleBackuper.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\Рабочий стол\\Проекты программирование\\SimpleBackuper\\SimpleBackuper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nonic\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\Nonic\\.nuget\\packages\\system.management\\7.0.1\\system.management.7.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

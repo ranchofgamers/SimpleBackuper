@@ -6,6 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
+      "SimpleBackuper/1.0.0": {
+        "dependencies": {
+          "System.Management": "7.0.1"
+        },
+        "runtime": {
+          "SimpleBackuper.dll": {}
+        }
+      },
       "System.CodeDom/7.0.0": {
         "runtime": {
           "lib/net6.0/System.CodeDom.dll": {
@@ -36,6 +44,11 @@
     }
   },
   "libraries": {
+    "SimpleBackuper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "System.CodeDom/7.0.0": {
       "type": "package",
       "serviceable": true,
