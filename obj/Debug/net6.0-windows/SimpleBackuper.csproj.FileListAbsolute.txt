@@ -21,3 +21,5 @@ E:\Рабочий стол\Проекты программирование\Simpl
 E:\Рабочий стол\Проекты программирование\SimpleBackuper\bin\Debug\net6.0-windows\System.Management.dll
 E:\Рабочий стол\Проекты программирование\SimpleBackuper\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
 E:\Рабочий стол\Проекты программирование\SimpleBackuper\obj\Debug\net6.0-windows\SimpleBackuper.csproj.CopyComplete
+E:\Рабочий стол\Проекты программирование\SimpleBackuper\bin\Debug\net6.0-windows\DotNetZip.dll
+E:\Рабочий стол\Проекты программирование\SimpleBackuper\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

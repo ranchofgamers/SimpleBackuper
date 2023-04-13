@@ -14,5 +14,11 @@
     <Setting Name="IsStartTrayMinimize" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="LastBackupTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ни разу не проводился</Value>
+    </Setting>
+    <Setting Name="LastBackupPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ни разу не проводился</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -70,5 +70,29 @@ namespace SimpleBackuper.Properties {
                 this["IsStartTrayMinimize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ни разу не проводился")]
+        public string LastBackupTime {
+            get {
+                return ((string)(this["LastBackupTime"]));
+            }
+            set {
+                this["LastBackupTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ни разу не проводился")]
+        public string LastBackupPath {
+            get {
+                return ((string)(this["LastBackupPath"]));
+            }
+            set {
+                this["LastBackupPath"] = value;
+            }
+        }
     }
 }

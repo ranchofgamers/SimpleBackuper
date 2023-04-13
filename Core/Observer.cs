@@ -11,14 +11,14 @@ namespace SimpleBackuper.Core
     {
         public event Action ?OnCreatedProcess;
         public event Action ?OnDeletedProcess;
-        public string ProcessName { get; set; }
+        public List<string> ProcessNames { get; set; }
 
         private ManagementEventWatcher creationWatcher;
         private ManagementEventWatcher deletionWatcher;
 
-        public Observer(string processName)
+        public Observer(List<string> processNames)
         {
-            ProcessName = processName;
+            ProcessNames = processNames;
 
             string creationQuery = "SELECT * FROM __InstanceCreationEvent WITHIN .025 WHERE TargetInstance ISA 'Win32_Process'";
             creationWatcher = new ManagementEventWatcher(creationQuery);
@@ -35,7 +35,7 @@ namespace SimpleBackuper.Core
             var targetInstance = ((System.Management.ManagementBaseObject)e.NewEvent.Properties["TargetInstance"].Value);
             var processName = targetInstance.Properties["Caption"].Value.ToString();
 
-            if (processName == ProcessName)
+            if (processName != null && ProcessNames.Contains(processName))
                 OnCreatedProcess?.Invoke();
         }
         private void OnDeletionProcess(object sender, EventArrivedEventArgs e)
@@ -43,7 +43,7 @@ namespace SimpleBackuper.Core
             var targetInstance = ((System.Management.ManagementBaseObject)e.NewEvent.Properties["TargetInstance"].Value);
             var processName = targetInstance.Properties["Caption"].Value.ToString();
 
-            if (processName == ProcessName)
+            if (processName != null && ProcessNames.Contains(processName))
                 OnDeletedProcess?.Invoke();
         }
         public void Dispose()

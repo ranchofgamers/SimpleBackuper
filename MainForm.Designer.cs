@@ -34,11 +34,11 @@
             IsStartTrayMinimize_cb = new CheckBox();
             SaveSettings_btn = new Button();
             groupBox6 = new GroupBox();
-            label4 = new Label();
+            LastBackupPath_lbl = new Label();
             groupBox2 = new GroupBox();
             BaseFile_btn = new Button();
             BaseFile_tb = new TextBox();
-            label1 = new Label();
+            LastBackupTime_lbl = new Label();
             groupBox1 = new GroupBox();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
@@ -77,7 +77,7 @@
             // SaveSettings_btn
             // 
             SaveSettings_btn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            SaveSettings_btn.Location = new Point(223, 19);
+            SaveSettings_btn.Location = new Point(313, 19);
             SaveSettings_btn.Name = "SaveSettings_btn";
             SaveSettings_btn.Size = new Size(85, 55);
             SaveSettings_btn.TabIndex = 5;
@@ -93,19 +93,19 @@
             groupBox6.Dock = DockStyle.Bottom;
             groupBox6.Location = new Point(0, 213);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(314, 83);
+            groupBox6.Size = new Size(404, 83);
             groupBox6.TabIndex = 7;
             groupBox6.TabStop = false;
             groupBox6.Text = "Настройки приложения:";
             // 
-            // label4
+            // LastBackupPath_lbl
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(7, 40);
-            label4.Name = "label4";
-            label4.Size = new Size(128, 15);
-            label4.TabIndex = 8;
-            label4.Text = "В папку: C:\\something";
+            LastBackupPath_lbl.AutoSize = true;
+            LastBackupPath_lbl.Location = new Point(5, 40);
+            LastBackupPath_lbl.Name = "LastBackupPath_lbl";
+            LastBackupPath_lbl.Size = new Size(112, 15);
+            LastBackupPath_lbl.TabIndex = 8;
+            LastBackupPath_lbl.Text = "Путь: C:\\something";
             // 
             // groupBox2
             // 
@@ -135,23 +135,23 @@
             BaseFile_tb.Size = new Size(199, 23);
             BaseFile_tb.TabIndex = 3;
             // 
-            // label1
+            // LastBackupTime_lbl
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(142, 15);
-            label1.TabIndex = 10;
-            label1.Text = "Бэкап сохранен: 00:00:00";
+            LastBackupTime_lbl.AutoSize = true;
+            LastBackupTime_lbl.Location = new Point(5, 20);
+            LastBackupTime_lbl.Name = "LastBackupTime_lbl";
+            LastBackupTime_lbl.Size = new Size(207, 15);
+            LastBackupTime_lbl.TabIndex = 10;
+            LastBackupTime_lbl.Text = "Последний бэкап сохранен: 00:00:00";
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(LastBackupTime_lbl);
+            groupBox1.Controls.Add(LastBackupPath_lbl);
             groupBox1.Dock = DockStyle.Top;
             groupBox1.Location = new Point(0, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(314, 70);
+            groupBox1.Size = new Size(404, 70);
             groupBox1.TabIndex = 11;
             groupBox1.TabStop = false;
             groupBox1.Text = "Информация:";
@@ -163,7 +163,7 @@
             groupBox3.Dock = DockStyle.Fill;
             groupBox3.Location = new Point(0, 70);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(314, 143);
+            groupBox3.Size = new Size(404, 143);
             groupBox3.TabIndex = 12;
             groupBox3.TabStop = false;
             groupBox3.Text = "Настройки бэкапа:";
@@ -211,12 +211,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(314, 296);
+            ClientSize = new Size(404, 296);
             Controls.Add(groupBox3);
             Controls.Add(groupBox1);
             Controls.Add(groupBox6);
             MaximizeBox = false;
-            MinimumSize = new Size(330, 335);
+            MinimumSize = new Size(420, 335);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Simple Backuper";
@@ -240,11 +240,11 @@
         private CheckBox IsStartTrayMinimize_cb;
         private Button SaveSettings_btn;
         private GroupBox groupBox6;
-        private Label label4;
+        private Label LastBackupPath_lbl;
         private GroupBox groupBox2;
         private Button BaseFile_btn;
         private TextBox BaseFile_tb;
-        private Label label1;
+        private Label LastBackupTime_lbl;
         private GroupBox groupBox1;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
