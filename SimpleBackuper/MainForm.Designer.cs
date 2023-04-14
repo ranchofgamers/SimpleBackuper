@@ -185,6 +185,7 @@
             this.ClientSize = new System.Drawing.Size(339, 186);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(355, 225);
             this.Name = "MainForm";

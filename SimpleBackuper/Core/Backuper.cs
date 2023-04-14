@@ -2,6 +2,7 @@
 using SimpleBackuper.Properties;
 using System;
 using System.IO;
+using System.Reflection;
 using System.Security.Cryptography;
 
 namespace SimpleBackuper
@@ -19,7 +20,7 @@ namespace SimpleBackuper
             try
             {
                 fileName = Path.GetFileName(source);
-                File.Copy(source, fileName, true);
+                File.Copy(source, $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\{fileName}", true);
                 using (SHA256 sha = SHA256Managed.Create())
                 {
                     using (FileStream fileStream = File.OpenRead(fileName))

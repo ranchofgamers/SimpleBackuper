@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Text;
 
 namespace SimpleBackuper
@@ -8,7 +9,7 @@ namespace SimpleBackuper
     {
         public static List<string> GetConfig()
         {
-            string cfgFileName = "config.cfg";
+            string cfgFileName = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\config.cfg";
             List<string> processNames = new List<string>();
 
             using (FileStream fs = new FileStream(cfgFileName, FileMode.OpenOrCreate))

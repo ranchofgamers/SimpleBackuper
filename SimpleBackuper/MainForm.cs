@@ -1,9 +1,12 @@
-﻿using Microsoft.Win32;
+﻿using IWshRuntimeLibrary;
+using Microsoft.Win32;
+using Microsoft.Win32.TaskScheduler;
 using SimpleBackuper.Properties;
 using System;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using File = System.IO.File;
 
 namespace SimpleBackuper
 {
@@ -42,7 +45,7 @@ namespace SimpleBackuper
                 LastBackupPath_lbl.Text = $"Путь к резервной копии: {Settings.Default.LastBackupPath}";
                 SetAutoRun(true);
             }
-            else this.Invoke(new Action(() =>
+            else this.Invoke(new System.Action(() =>
             {
                 InitSettings();
             }));
@@ -71,30 +74,52 @@ namespace SimpleBackuper
         }
         private void SetAutoRun(bool autorun)
         {
-            string name = Application.ProductName;
-            RegistryKey reg;
-            try
+            object shortPath = (object)"Startup";
+            if (autorun)
             {
-                reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
+                WshShell shell = new WshShell();
+                string link = Path.Combine(((string)shell.SpecialFolders.Item(ref shortPath)), Application.ProductName + @".lnk");
+                IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(link);
 
-                if (autorun)
-                {
-                    if (reg.GetValue(name) == null)
-                        reg.SetValue(name, Assembly.GetExecutingAssembly().Location);
-                }
-                else
-                {
-                    if (reg.GetValue(name) != null)
-                        reg.DeleteValue(name);
-                }
+                shortcut.IconLocation = Assembly.GetExecutingAssembly().Location;
+                shortcut.TargetPath = Assembly.GetExecutingAssembly().Location;
+                shortcut.Save();
+            }
+            else if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup) + Application.ProductName + @".lnk"))
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.Startup) + Application.ProductName + @".lnk");
 
-                reg.Flush();
-                reg.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Произошла ошибка: " + ex.Message);
-            }
+            //using (TaskService ts = new TaskService())
+            //{
+            //    TaskDefinition td = ts.NewTask();
+
+            //    td.RegistrationInfo.Description = "Автозапуск SimpleBackuper";
+            //    td.Triggers.Add(new BootTrigger() { Enabled = true });
+            //    td.Actions.Add(new ExecAction("notepad.exe"));
+            //    ts.RootFolder.RegisterTaskDefinition(@"Test", td);
+            //    ts.RootFolder.DeleteTask("Test");
+            //}
+
+            //string name = Application.ProductName;
+            //RegistryKey reg;
+            //try
+            //{
+            //    reg = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run",true);
+
+            //    if (autorun)
+            //        reg.SetValue(name, Assembly.GetExecutingAssembly().Location);
+            //    else
+            //    {
+            //        if (reg.GetValue(name) != null)
+            //            reg.DeleteValue(name);
+            //    }
+
+            //    reg.Flush();
+            //    reg.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Произошла ошибка: " + ex.Message);
+            //}
         }
         #endregion
 

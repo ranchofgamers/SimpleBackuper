@@ -63,9 +63,49 @@ namespace SimpleBackuper.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
         /// </summary>
-        internal static System.Drawing.Icon AppIcon {
+        internal static System.Drawing.Icon AppIcon148 {
             get {
-                object obj = ResourceManager.GetObject("AppIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("AppIcon148", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon AppIcon200 {
+            get {
+                object obj = ResourceManager.GetObject("AppIcon200", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon AppIcon24 {
+            get {
+                object obj = ResourceManager.GetObject("AppIcon24", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon AppIcon256 {
+            get {
+                object obj = ResourceManager.GetObject("AppIcon256", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon AppIcon56 {
+            get {
+                object obj = ResourceManager.GetObject("AppIcon56", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
