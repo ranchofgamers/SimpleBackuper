@@ -1,0 +1,17 @@
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\bin\Release\SimpleBackuper.exe.config
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\bin\Release\SimpleBackuper.exe
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\bin\Release\SimpleBackuper.pdb
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\bin\Release\DotNetZip.dll
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\bin\Release\System.CodeDom.dll
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\bin\Release\DotNetZip.pdb
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\bin\Release\DotNetZip.xml
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\bin\Release\System.CodeDom.xml
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\obj\Release\SimpleBackuper.csproj.AssemblyReference.cache
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\obj\Release\SimpleBackuper.csproj.SuggestedBindingRedirects.cache
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\obj\Release\SimpleBackuper.MainForm.resources
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\obj\Release\SimpleBackuper.Properties.Resources.resources
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\obj\Release\SimpleBackuper.csproj.GenerateResource.cache
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\obj\Release\SimpleBackuper.csproj.CoreCompileInputs.cache
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\obj\Release\SimpleBackuper.csproj.CopyComplete
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\obj\Release\SimpleBackuper.exe
+C:\Users\oshoshkin\Desktop\SimpleBackuper\SimpleBackuper\obj\Release\SimpleBackuper.pdb
