@@ -1,0 +1,17 @@
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Release\SimpleBackupper.exe.config
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Release\SimpleBackupper.exe
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Release\SimpleBackupper.pdb
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Release\DotNetZip.dll
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Release\System.CodeDom.dll
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Release\DotNetZip.pdb
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Release\DotNetZip.xml
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Release\System.CodeDom.xml
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Release\SimpleBackupper.csproj.AssemblyReference.cache
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Release\SimpleBackupper.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Release\SimpleBackupper.MainForm.resources
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Release\SimpleBackupper.Properties.Resources.resources
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Release\SimpleBackupper.csproj.GenerateResource.cache
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Release\SimpleBackupper.csproj.CoreCompileInputs.cache
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Release\SimpleBackupper.csproj.CopyComplete
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Release\SimpleBackupper.exe
+C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Release\SimpleBackupper.pdb
