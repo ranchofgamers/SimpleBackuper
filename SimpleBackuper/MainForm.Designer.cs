@@ -132,6 +132,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BackupsFolderPath_tb.Location = new System.Drawing.Point(6, 19);
             this.BackupsFolderPath_tb.Name = "BackupsFolderPath_tb";
+            this.BackupsFolderPath_tb.ReadOnly = true;
             this.BackupsFolderPath_tb.Size = new System.Drawing.Size(237, 20);
             this.BackupsFolderPath_tb.TabIndex = 0;
             // 
@@ -165,6 +166,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BaseFile_tb.Location = new System.Drawing.Point(6, 19);
             this.BaseFile_tb.Name = "BaseFile_tb";
+            this.BaseFile_tb.ReadOnly = true;
             this.BaseFile_tb.Size = new System.Drawing.Size(237, 20);
             this.BaseFile_tb.TabIndex = 0;
             // 
