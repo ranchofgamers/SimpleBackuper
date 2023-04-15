@@ -1,4 +1,5 @@
-﻿using SimpleBackupper.Core;
+﻿using Microsoft.Win32;
+using SimpleBackupper.Core;
 using SimpleBackupper.Properties;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,8 @@ namespace SimpleBackupper
 
                 LastBackupTime_lbl.Text = $"Последняя копия создана (UTC): {DateTime.FromFileTimeUtc(Settings.Default.LastBackupTime):yyyy.MM.dd - HH:mm:sstt}";
                 LastBackupPath_lbl.Text = $"Путь к резервной копии: {Settings.Default.LastBackupPath}";
+
+                AutoStart(Settings.Default.IsStartWithWindows);
             }
             else Invoke(new Action(() => { InitSettings(); }));
         }
@@ -67,6 +70,25 @@ namespace SimpleBackupper
             else if (result.BackupException is IOException)
                 MessageBox.Show("Резервное копирование базы ЭРЖ не удалось т.к. база занята каким-то другим приложением.", "Simple Backupper", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show("Резервное копирование базы ЭРЖ не удалось.", "Simple Backupper", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private bool AutoStart(bool flag)
+        {
+            string applicationName = Application.ProductName;
+            string pathRegistryKeyStartup = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
+
+            using (RegistryKey registryKeyStartup = Registry.CurrentUser.OpenSubKey(pathRegistryKeyStartup, true))
+            {
+                if (flag)
+                {
+                    registryKeyStartup.SetValue(applicationName, string.Format("\"{0}\"", System.Reflection.Assembly.GetExecutingAssembly().Location));
+                    return true;
+                }
+                else
+                {
+                    registryKeyStartup.DeleteValue(applicationName, false);
+                    return false;
+                }
+            }
         }
         #endregion
 
@@ -100,7 +122,13 @@ namespace SimpleBackupper
         }
         private void AutoStartSwitcher_btn_Click(object sender, EventArgs e)
         {
+            Settings.Default.IsStartWithWindows = !Settings.Default.IsStartWithWindows;
+            Settings.Default.Save();
+            var result = AutoStart(Settings.Default.IsStartWithWindows);
 
+            if (result)
+                MessageBox.Show("Приложение успешно добавлено в атозагрузку.", "Включено", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Приложение успешно удалено из автозагрузки.", "Отключено", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 

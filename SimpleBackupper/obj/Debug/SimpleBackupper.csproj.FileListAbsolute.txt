@@ -15,3 +15,20 @@ C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper
 C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Debug\DotNetZip.dll
 C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Debug\DotNetZip.pdb
 C:\Users\Nonic\Desktop\SimpleBackupper\SimpleBackupper\bin\Debug\DotNetZip.xml
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\bin\Debug\SimpleBackupper.exe.config
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\bin\Debug\SimpleBackupper.exe
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\bin\Debug\SimpleBackupper.pdb
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\bin\Debug\DotNetZip.dll
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\bin\Debug\System.CodeDom.dll
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\bin\Debug\DotNetZip.pdb
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\bin\Debug\DotNetZip.xml
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\bin\Debug\System.CodeDom.xml
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.AssemblyReference.cache
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.SuggestedBindingRedirects.cache
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.MainForm.resources
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.Properties.Resources.resources
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.GenerateResource.cache
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.CoreCompileInputs.cache
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.CopyComplete
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.exe
+E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.pdb
