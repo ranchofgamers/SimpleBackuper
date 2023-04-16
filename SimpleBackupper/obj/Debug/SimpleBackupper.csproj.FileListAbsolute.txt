@@ -32,3 +32,20 @@ E:\Рабочий стол\Проекты программирование\Simpl
 E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.CopyComplete
 E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.exe
 E:\Рабочий стол\Проекты программирование\SimpleBackupper\SimpleBackupper\obj\Debug\SimpleBackupper.pdb
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\bin\Debug\SimpleBackupper.exe.config
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\bin\Debug\SimpleBackupper.exe
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\bin\Debug\SimpleBackupper.pdb
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\bin\Debug\DotNetZip.dll
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\bin\Debug\System.CodeDom.dll
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\bin\Debug\DotNetZip.pdb
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\bin\Debug\DotNetZip.xml
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\bin\Debug\System.CodeDom.xml
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.AssemblyReference.cache
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.SuggestedBindingRedirects.cache
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\obj\Debug\SimpleBackupper.MainForm.resources
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\obj\Debug\SimpleBackupper.Properties.Resources.resources
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.GenerateResource.cache
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.CoreCompileInputs.cache
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\obj\Debug\SimpleBackupper.csproj.CopyComplete
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\obj\Debug\SimpleBackupper.exe
+D:\GitRepositories\SimpleBackuper\SimpleBackupper\obj\Debug\SimpleBackupper.pdb

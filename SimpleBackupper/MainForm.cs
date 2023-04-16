@@ -26,6 +26,8 @@ namespace SimpleBackupper
             observer = new Observer(Configurator.GetConfig());
             observer.OnDeletedProcess += Observer_OnDeletedProcess;
             observer.Start();
+
+            SystemEvents.SessionEnding += Exit;
         }
 
         #region Приватные методы
@@ -132,15 +134,11 @@ namespace SimpleBackupper
         }
         #endregion
 
-        #region Обработчики уровня приложения
-        private void Exit(object sender, EventArgs e)
-        {
-            Dispose();
-            Application.Exit();
-        }
-        #endregion
-
         #region Обработчики поведения формы
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
         private void MainForm_Resize(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Minimized)
@@ -158,5 +156,14 @@ namespace SimpleBackupper
             e.Cancel = true;
         }
         #endregion
+
+        #region Обработчики уровня приложения
+        private void Exit(object sender, EventArgs e)
+        {
+            Dispose();
+            Application.Exit();
+        }
+        #endregion
+
     }
 }
