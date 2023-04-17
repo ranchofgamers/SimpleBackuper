@@ -16,7 +16,7 @@ namespace SimpleBackupper
         [STAThread]
         static void Main()
         {
-            if(System.Diagnostics.Process.GetProcessesByName(System.Diagnostics.Process.GetCurrentProcess().ProcessName).Length > 1)
+            if (System.Diagnostics.Process.GetProcessesByName(System.Diagnostics.Process.GetCurrentProcess().ProcessName).Length > 1)
                 return;
 
             Settings.Default.APP_DIRECTORY = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);

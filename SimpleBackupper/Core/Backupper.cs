@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
@@ -13,6 +14,9 @@ namespace SimpleBackupper.Core
 {
     public static class Backupper
     {
+        private const string prefix = "backup_UTC_";
+        private const long unixDeltaTime = 604800; //Неделя в сек.
+
         public static BackupData MakeBackup(string baceFilePath, string backupsDirectory)
         {
             long backupingStartTime = DateTime.Now.ToFileTimeUtc();
@@ -48,7 +52,7 @@ namespace SimpleBackupper.Core
                 }
 
                 string date = DateTime.FromFileTimeUtc(backupingStartTime).ToString("yyyy-MM-dd-HH-mm-sstt");
-                string zipFilePath = $"{backupsDirectory}\\backup_UTC_{date}.zip";
+                string zipFilePath = $"{backupsDirectory}\\{prefix}{date}.zip";
 
                 int counter = 0;
                 while (File.Exists(zipFilePath))
@@ -80,21 +84,39 @@ namespace SimpleBackupper.Core
         }
         private static void DeleteOldBackups(string backupsDirectory)
         {
-            //TODO: Сделать через регулярные выражения и првоверять по имени файла
             if (!Directory.Exists(backupsDirectory))
                 return;
 
             foreach (var file in Directory.GetFiles(backupsDirectory))
             {
-                if (Path.GetExtension(file) == "zip")
+                try
                 {
-                    long creationTime = File.GetCreationTimeUtc(file).ToFileTimeUtc();
-                    if (creationTime > DateTime.UtcNow.ToFileTimeUtc() - 604800)
+                    if (Path.GetExtension(file) != ".zip")
+                        continue;
+
+                    Regex filter = new Regex($"{prefix}" + @"\d{4}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}" + ".zip");
+
+                    var fileNameWithoutExt = Path.GetFileNameWithoutExtension(file);
+                    if (!filter.IsMatch(Path.GetFileName(file)))
+                        continue;
+
+                    var UTCparseDate = fileNameWithoutExt.Replace(prefix, "").Split('-');
+
+                    var UTCCreationTime = new DateTime(
+                        Convert.ToInt32(UTCparseDate[0]),
+                        Convert.ToInt32(UTCparseDate[1]),
+                        Convert.ToInt32(UTCparseDate[2]),
+                        Convert.ToInt32(UTCparseDate[3]),
+                        Convert.ToInt32(UTCparseDate[4]),
+                        Convert.ToInt32(UTCparseDate[5]));
+
+                    if (((DateTimeOffset)UTCCreationTime).ToUnixTimeSeconds() < ((DateTimeOffset)DateTime.UtcNow).ToUnixTimeSeconds() - unixDeltaTime)
                     {
                         try { File.Delete(file); }
-                        catch(Exception) { continue; }
+                        catch (Exception) { continue; }
                     }
                 }
+                catch (Exception) { continue; }
             }
         }
     }
