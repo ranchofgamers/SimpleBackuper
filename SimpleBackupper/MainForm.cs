@@ -5,10 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimpleBackupper
@@ -27,7 +30,7 @@ namespace SimpleBackupper
             observer.OnDeletedProcess += Observer_OnDeletedProcess;
             observer.Start();
 
-            SystemEvents.SessionEnding += Exit;
+            SystemEvents.SessionEnding += Kill;
         }
 
         #region Приватные методы
@@ -160,8 +163,20 @@ namespace SimpleBackupper
         #region Обработчики уровня приложения
         private void Exit(object sender, EventArgs e)
         {
-            Dispose();
+            while (Backupper.IsBusy)
+                Task.Delay(1000);
+
+            observer.Stop();
+            this.Close();
+            this.Dispose();
             Application.Exit();
+        }
+        private void Kill(object sender, EventArgs e)
+        {
+            while (Backupper.IsBusy)
+                Task.Delay(1000);
+
+            Process.GetCurrentProcess().Kill();
         }
         #endregion
 

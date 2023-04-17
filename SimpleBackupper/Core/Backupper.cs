@@ -14,11 +14,15 @@ namespace SimpleBackupper.Core
 {
     public static class Backupper
     {
+        public static bool IsBusy { get; private set; } = false;
+
         private const string prefix = "backup_UTC_";
         private const long unixDeltaTime = 604800; //Неделя в сек.
 
         public static BackupData MakeBackup(string baceFilePath, string backupsDirectory)
         {
+            IsBusy = true;
+
             long backupingStartTime = DateTime.Now.ToFileTimeUtc();
 
             if (!File.Exists(baceFilePath))
@@ -80,6 +84,7 @@ namespace SimpleBackupper.Core
                 if(File.Exists(tempBaseFilePath))
                     File.Delete(tempBaseFilePath);
                 DeleteOldBackups(backupsDirectory);
+                IsBusy = false;
             }
         }
         private static void DeleteOldBackups(string backupsDirectory)
