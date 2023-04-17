@@ -1,9 +1,13 @@
-﻿using SimpleBackupper.Properties;
+﻿using Microsoft.Win32;
+using SimpleBackupper.Core;
+using SimpleBackupper.Properties;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimpleBackupper

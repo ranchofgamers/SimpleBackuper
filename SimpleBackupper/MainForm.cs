@@ -31,6 +31,7 @@ namespace SimpleBackupper
             observer.Start();
 
             SystemEvents.SessionEnding += Kill;
+            SystemEvents.SessionEnded += Kill;
         }
 
         #region Приватные методы
@@ -173,6 +174,8 @@ namespace SimpleBackupper
         }
         private void Kill(object sender, EventArgs e)
         {
+            WindowState = FormWindowState.Maximized;
+
             while (Backupper.IsBusy)
                 Task.Delay(1000);
 
