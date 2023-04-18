@@ -83,7 +83,8 @@ namespace SimpleBackupper
             {
                 if (flag)
                 {
-                    registryKeyStartup.SetValue(applicationName, string.Format("\"{0}\"", System.Reflection.Assembly.GetExecutingAssembly().Location));
+                    var x = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                    registryKeyStartup.SetValue(applicationName, string.Format("{0}", System.Reflection.Assembly.GetExecutingAssembly().Location));
                     return true;
                 }
                 else
